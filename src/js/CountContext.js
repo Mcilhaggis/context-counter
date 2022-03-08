@@ -1,9 +1,7 @@
 import React, { createContext, useReducer } from 'react';
-
 export const CountContext = createContext();
 
 export default function CounterProvider(props) {
-    // Store of inital state
     const initialState = { count: 0 };
 
     const reducer = (state, action) => {
@@ -14,13 +12,13 @@ export default function CounterProvider(props) {
                 return { count: state.count + 10 };
             case 'increase100':
                 return { count: state.count + 100 };
+            case 'reset':
+                return { count: 0 };
             default:
                 throw new Error()
         }
     }
-
     const [count, dispatch] = useReducer(reducer, initialState);
-
     return (
         <>
             <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>

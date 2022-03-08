@@ -5,6 +5,7 @@ import { CountContext } from './CountContext';
 import ButtonOne from './buttons/ButtonOne'
 import ButtonTen from './buttons/ButtonTen'
 import ButtonOneH from './buttons/ButtonOneH'
+import Reset from './buttons/Reset'
 
 function Counter() {
     const context = useContext(CountContext)
@@ -16,6 +17,7 @@ function Counter() {
             <ButtonOne />
             <ButtonTen />
             <ButtonOneH /> 
+            <Reset />
         </>
     )
 }
