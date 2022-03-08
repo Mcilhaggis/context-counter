@@ -11,13 +11,17 @@ function Counter() {
     const context = useContext(CountContext)
     return (
         <>
-            <p>Counter:</p>
-            <p>{context.countState.count}</p>
+            <div className="counterContainer">
+                <div className="counterContent">
+                    <p className="countTally">{context.countState.count}</p>
+                    <h3 className="counterTitle">COUNTER</h3>
 
-            <ButtonOne />
-            <ButtonTen />
-            <ButtonOneH /> 
-            <Reset />
+                    <ButtonOne />
+                    <ButtonTen />
+                    <ButtonOneH />
+                    <Reset />
+                </div>
+            </div>
         </>
     )
 }

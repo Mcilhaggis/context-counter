@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
 import CounterProvider from './js/CountContext';
 import Counter from './js/Counter'
+import './css/style.scss';
 
 export default function App() {
   return (

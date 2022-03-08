@@ -5,7 +5,7 @@ export default function ButtonTen() {
     const context = useContext(CountContext)
     return (
         <>
-            <button onClick={() => context.countDispatch({ type: 'reset' })}>Reset</button>
+            <button  className="btn resetBtn" onClick={() => context.countDispatch({ type: 'reset' })}>Reset</button>
         </>
     )
 }
