@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import { CounterContext } from '../CountContext';
 
 
-function BtnOne() {
+function ButtonTen() {
     const context = useContext(CounterContext)
     console.log(context)
     return (
         <>
-            <button>Add 1</button>
+            <button>Add 100</button>
 
         </>
     )
 }
 
-export default BtnOne;
+export default ButtonTen;

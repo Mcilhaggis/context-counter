@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { CounterContext } from './CountContext';
 // Import buttons
-import ButtonOne from './js/buttons/ButtonOne'
-import ButttonTen from './js/buttons/ButttonTen'
-import ButtonOneH from './js/buttons/ButtonOneH'
+import ButtonOne from './buttons/ButtonOne'
+import ButtonTen from './buttons/ButtonTen'
+import ButtonOneH from './buttons/ButtonOneH'
 
 
 function Counter() {
@@ -15,7 +15,7 @@ function Counter() {
             <p>{context.count}</p>
 
             <ButtonOne />
-            <ButttonTen />
+            <ButtonTen />
             <ButtonOneH />
         </>
     )
