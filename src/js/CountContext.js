@@ -1,18 +1,31 @@
-import React, { createContext } from 'react';
+import React, { createContext, useReducer } from 'react';
 
-export const CounterContext = createContext();
+export const CountContext = createContext();
 
-export default function ProviderComponent(props) {
+export default function CounterProvider(props) {
+    // Store of inital state
+    const initialState = { count: 0 };
 
-    const countInfo = {
-        count: 0,
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case 'increase1':
+                return { count: state.count + 1 };
+            case 'increase10':
+                return { count: state.count + 10 };
+            case 'increase100':
+                return { count: state.count + 100 };
+            default:
+                throw new Error()
+        }
     }
+
+    const [count, dispatch] = useReducer(reducer, initialState);
 
     return (
         <>
-            <CounterContext.Provider value={countInfo}>
+            <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
                 {props.children}
-            </CounterContext.Provider>
+            </CountContext.Provider>
         </>
     )
 }

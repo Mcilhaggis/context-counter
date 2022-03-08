@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { CounterContext } from '../CountContext';
+import { CountContext } from '../CountContext';
 
 
 function BtnOne() {
-    const context = useContext(CounterContext)
-    console.log(context)
+    const context = useContext(CountContext)
+
     return (
         <>
-            <button>Add 1</button>
+            <button onClick={() => context.countDispatch({ type: 'increase1' })}>Add 1</button>
 
         </>
     )

@@ -1,17 +1,23 @@
 import React from 'react';
 import './App.css';
-import ProviderComponent from './js/CountContext';
+import CounterProvider from './js/CountContext';
 import Counter from './js/Counter'
 
+
+
 function App() {
-
-
   return (
-    <ProviderComponent>
-      <div className="App">
+    // Strict mode will highlight potential problems with the project
+    // <React.StrictMode>
+    <div className="App">
+      <CounterProvider>
+        {console.log(CounterProvider)}
         <Counter />
-      </div>
-    </ProviderComponent>
+        {/* <p>test</p> */}
+      </CounterProvider>
+    </div>
+    // </React.StrictMode>
+
   );
 }
 
