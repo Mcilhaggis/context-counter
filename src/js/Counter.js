@@ -12,9 +12,10 @@ function Counter() {
     return (
         <>
             <div className="counterContainer">
+                <h1 className="projectHeader">Count with Context and Reducers</h1>
                 <div className="counterContent">
                     <p className="countTally">{context.countState.count}</p>
-                    <h3 className="counterTitle">COUNTER</h3>
+                    <h2 className="counterTitle">COUNTER</h2>
 
                     <ButtonOne />
                     <ButtonTen />
