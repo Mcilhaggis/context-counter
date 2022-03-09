@@ -1,10 +1,10 @@
 # Count with UseContext and useReducer
-`
+
 This project is an exercise in utilizing both UseReducer and UseContext to create a functional component based application. The application allows the user to add digits to a number starting at 0 and clear, storing its state in a global Context Provider. The functionality is also stored in the global state using a switch case nested in useReducer to determine the chosen user action. 
 
 
 ## Live Project
-The project can be viewed live here: https://fast-ravine-10902.herokuapp.com/
+The project can be viewed live here: https://mcilhaggis.github.io/context-counter/
 
 ## Tool & Resources
 * React.js - JavaScript runtime environment
